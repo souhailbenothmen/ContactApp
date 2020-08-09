@@ -1,3 +1,3 @@
-Running the app
-meteor npm install
+<h1>Running the app</h1><br />
+meteor npm install<br />
 meteor
