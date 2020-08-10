@@ -19,7 +19,10 @@ export const schema = {
     adresse: { type: "string" },
     ville: { type: "string" },
     province: { type: "string" },
-    codePostal: { type: "number" },
+    codePostal: {
+      type: "string",
+      pattern: "^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$",
+    },
     pays: {
       type: "string",
     },
