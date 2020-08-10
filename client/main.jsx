@@ -13,15 +13,15 @@ import { combineReducers } from "redux";
 import { Provider } from "react-redux";
 
 const rootReducer = combineReducers({
-  currentUser: currentUser,
-  homePage: homePage,
+  currentUser,
+  homePage,
   itemClickState,
   addFormState,
   idSelectedState,
 });
 const store = createStore(
   rootReducer,
-  +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 if (Meteor.isClient) {

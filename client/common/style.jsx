@@ -53,6 +53,55 @@ const styleBoxNavbar = {
   flexWrap: "wrap",
   justifyContent: "space-between",
 };
+const useStylesBanner = makeStyles((theme) => ({
+  banner: {
+    position: "fixed",
+    backgroundColor: theme.palette.grey[800],
+    color: theme.palette.common.white,
+    backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    width: "100%",
+    height: "70%",
+    marginLeft: theme.spacing(-1),
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    backgroundColor: "rgba(0,0,0,.3)",
+  },
+  bannerContent: {
+    position: "relative",
+    padding: theme.spacing(6),
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(20),
+      paddingRight: 0,
+    },
+  },
+}));
+const useStylesSignIn = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: "100%",
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
 export {
   useStylesModal,
   StyledTableCell,
@@ -60,4 +109,6 @@ export {
   useStyles,
   styleNavbar,
   styleBoxNavbar,
+  useStylesBanner,
+  useStylesSignIn,
 };
